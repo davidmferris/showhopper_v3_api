@@ -1,0 +1,19 @@
+AllCops:
+  Include:
+    - Rakefile
+    - config.ru
+    - lib/tasks/**/*.rake
+  Exclude:
+    - db/**/*
+    - bin/**/*
+    - node_modules/**/*
+    - config/**/*
+    - client/**/*
+    - spec/factories/**/*
+    - vendor/assets/bower_components/**/*
+    - spec/spec_helper.rb
+    - spec/rails_helper.rb
+Rails:
+  Enabled: true
+Style/Documentation:
+  Enabled: false
