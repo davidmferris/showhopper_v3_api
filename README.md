@@ -1,3 +1,5 @@
+https://travis-ci.org/davidmferris/showhopper_v3_api.svg?branch=master
+
 # README
 
 This README would normally document whatever steps are necessary to get the
