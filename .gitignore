@@ -23,4 +23,6 @@
 # Ignore environment variables
 .env
 
+# Test stuff
 /spec/vcr_cassettes
+coverage
