@@ -1,12 +1,19 @@
 language: ruby
 cache: bundler
 rvm:
-  - 2.2.2
+- 2.2.2
 env:
-  - DB=postgresql
+- DB=postgresql
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec rake db:test:prepare
-  - bundle exec rspec spec/
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rspec spec/
 before_script:
-  - psql -c 'create database showhopper_v3_api_test' -U postgres
+- psql -c 'create database showhopper_v3_api_test' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: NEHzTeXpJ00kqAxj2hiJJSN36GOZ/6UZ+zcOdmSzhMUtFksK2mda1ase6eQsm1dHWDpdwTte7/ngVDSgDUm59KIRUwh0GRfXzX5inWmd9AwnuwSO6EPK45slLzPVTwvFCgwWYtaj/PhIHSzkHzSRhh6ERKPTAhTsPnHqsTbDBM4i6s6i1w4N/yICA8O1L7x8EFsQRfEzUdUWn5vnufjJv/UvDakU6ohvKzd11lcrmGJXh5AdcgeQJe6IBHpVrpuxItOFg8vQt3K6U8OX1Ok/sBHwH0VJN3ego/jv3DlkVLSTsLdlZA+aCoIA+LKCF5GNgPCdpmQaqXFnyyNxr5dshjiyIyRm9ye+Da9A4l9alcFfzif+tZf8BKOUtaoxijlZcU/gE2cAEvGVglk+ezDQUa6BpkI89IHxUkKuyUmyihY1GMVVgSHI+bWVCRksFrna5dJylHYj4MqWdyvlqBWpGV1HaQTzJ08KiciWuNA3/Rja87MC3jdCDGhT1H2vShxkX57Po0MAYWxkv6IjdqStZ8FlgDA9bxCynHbvTSbUnO9ul4eBTUvB0lC+rhxK3bo787f5su3ULue9+9BuyOfecMUTkMSgfhsPJN1MSoozVksG8QgxZBhG+n6MWnG+pjnD6viJu0+xbPVLmv/IJvrA+0crSS+T7I8wlMnO/CjRJcw=
+  app: showhopper-api
+  on:
+    repo: davidmferris/showhopper_v3_api

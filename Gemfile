@@ -24,6 +24,7 @@ gem 'rack-cors'
 gem 'apipie-rails'
 gem 'pundit'
 gem 'httparty'
+gem 'dotenv-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -35,7 +36,6 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'rails_best_practices'
   gem 'reek'
-  gem 'dotenv-rails'
 end
 
 group :development do
