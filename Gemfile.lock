@@ -108,6 +108,7 @@ GEM
     minitest (5.10.1)
     multi_json (1.12.1)
     multi_xml (0.6.0)
+    newrelic_rpm (4.2.0.334)
     nio4r (2.0.0)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
@@ -252,6 +253,7 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.5)
   listen (~> 3.0.5)
+  newrelic_rpm
   pg
   pry-rails
   puma (~> 3.0)
